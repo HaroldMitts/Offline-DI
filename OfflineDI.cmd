@@ -1,7 +1,7 @@
 @ECHO off
 FOR /f "tokens=2 delims==" %%I IN ('wmic computersystem get Manufacturer /format:list') DO SET "SYSMANUFACTURER=%%I"
 FOR /f "tokens=2 delims==" %%I IN ('wmic computersystem get model /format:list') DO SET "SYSMODEL=%%I"
-rem FOR %%a IN (c d e f g h i j k l m n o p q r s t u v w x y z) DO VOL %%a: 2>NUL|find "USB-B" >NUL && SET DRV=%%a:
+FOR %%a IN (c d e f g h i j k l m n o p q r s t u v w x y z) DO VOL %%a: 2>NUL|find "USB-B" >NUL && SET DRV=%%a:
 
 CALL :TRIM %SYSMANUFACTURER%
 SET SYSMANUFACTURER=%TRIMRESULT%
@@ -11,8 +11,7 @@ SET SYSMODEL=%TRIMRESULT%
 
 FOR /f "tokens=2 delims== " %%b IN ('set processor ^|find "PROCESSOR_ARCHITECTURE="') DO SET "OSArch=%%b"
 
-SET DRV="Z:\USB-B\Deployment"
-@ECHO Setting Drivers root ( %DRV% ) to Z: 
+@ECHO USB-B Drive letter detected as: %DRV%
 @ECHO Deploying Drivers for %SYSMANUFACTURER% %SYSMODEL% %OSARCH% using the following path;
 @ECHO %DRV%\Drivers\%SYSMANUFACTURER%\%SYSMODEL%\%OSARCH%
 

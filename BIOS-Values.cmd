@@ -9,9 +9,7 @@ SET SYSMANUFACTURER=%TRIMRESULT%
 CALL :TRIM %SYSMODEL%
 SET SYSMODEL=%TRIMRESULT%
 
-@ECHO.
-@ECHO This computersystem is a %SYSMANUFACTURER% %SYSMODEL% 
-@ECHO Save the drivers from C:\Drivers to a folder in your storage named exactly as shown:
+@ECHO Save the drivers from C:\Drivers to a folder in your share named exactly as shown:
 @ECHO.
 @ECHO %DRV%\Drivers\%SYSMANUFACTURER%\%SYSMODEL%\%OSARCH%
 
