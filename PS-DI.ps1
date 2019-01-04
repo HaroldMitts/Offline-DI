@@ -8,16 +8,7 @@ to WinPE.
 Network share where drivers are saved is assumed to be Z:\Drivers
 
 Prerequisite: You must add the PowerShell optional component to WinPE for WinPE to support this script
-OC install order: 
-1. WinPE-WMI.cab
-2. WinPE-WMI_en-us.cab
-3. WinPE-Scripting.cab
-4. WinPE-Scripting_en-us.cab 
-5. WinPE-NetFx.cab
-6. WinPE-NetFx_en-us.cab
-7. WinPE-Scripting_en-us.cab
-8. WinPE-PowerShell.cab
-9. WinPE-PowerShell_en-us.cab
+See example in "Add Optional Components to WinPE - Example.txt" file included in this repo.
 
 Place your INF drivers into folders named after WMI values. 
 Example:  D:\Drivers\Microsoft Corporation\Virtual Machine\64-bit
