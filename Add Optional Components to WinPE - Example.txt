@@ -8,4 +8,6 @@ dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\W
 dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-NetFx_en-us.cab"
 dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
 dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-PowerShell_en-us.cab"
+dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-DismCmdlets.cab"
+dism /add-package /image:"C:\Mount\WinPE" /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
 dism /unmount-image /mountdir:"C:\Mount\WinPE" /commit
