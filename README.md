@@ -38,21 +38,21 @@ The process flow for offline driver injection is described in 2 steps;
 
 _(UEFI systems will contain additional partitions for MSR and EFI)_
 
-3. While still in Windows PE, connect to the network share where you staged drivers in the preproduction phase, or connect the USB drive (if not using the network method). You can use the **NET USE** command. 
+3. While still in Windows PE, connect to the network share where you staged drivers in the preproduction phase, or connect the USB drive (if not using the network method). You can use the `NET USE` command. 
 
-4. Run the **offline-di.cmd** script which matches your deployment method (OfflineDI-Net.cmd for network or OfflineDI-USB for USB method) and verify the script successfully connected to the staging folder and injected any drivers found (You will verify they successfully installed during OOBE). 
+4. Run the `offline-di.cmd` script which matches your deployment method (OfflineDI-Net.cmd for network or OfflineDI-USB for USB method) and verify the script successfully connected to the staging folder and injected any drivers found (You will verify they successfully installed during OOBE). 
 
-5. Type **Exit**, in the Windows PE command prompt, to reboot the computer
+5. Type `Exit`, in the Windows PE command prompt, to reboot the computer
 
-6. The device should boot to OOBE. Press **Shift + F10** keys to bring up a command prompt. 
+6. The device should boot to OOBE. Press `Shift + F10` keys to bring up a command prompt. 
 
-7. Type **devmgmt.msc** to invoke Device Manager and verify all device drivers are supported. If you still have devices which are unsupported, you should troubleshoot this and retry the deployment and driver injection. Some causes for missed drivers can include; 
+7. Type `devmgmt.msc` to invoke Device Manager and verify all device drivers are supported. If you still have devices which are unsupported, you should troubleshoot this and retry the deployment and driver injection. Some causes for missed drivers can include; 
 
 * Missing drivers in the staged driver location
 * Missing firmware values for manufacturer or model (in this case, you must manage device drivers using a different method)
 * Improper driver staging (check to be sure you put the drivers into the right location)
 * Drivers added to staging do not match the devices present 
 
-8. Shutdown the device using the Shutdown command. Example; **SHUTDOWN -s -t 0**
+8. Shutdown the device using the Shutdown command. Example; `SHUTDOWN -s -t 0`
 
 9. Prepare the device for shipment. Put it into inventory, ship it, or deliver it to the end-user.
