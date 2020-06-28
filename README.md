@@ -28,7 +28,7 @@ The process flow for offline driver injection is described in 2 steps;
 
 1. Deploy Windows to a device, using Windows PE or a script run during Windows PE.
 
-> I have created a simple script to install Windows 10 from WinPE called Wininstall.cmd - have a look here: [https://github.com/HaroldMitts/wininstall](https://github.com/HaroldMitts/wininstall), or alternatively, use Microsoft version of **walkthough-deploy.bat** available here: https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip. My script is based on the Microsoft version, but adds some automation and either can be run during Windows PE to deploy Windows to devices, including BIOS and EUFI methods and hard disk recovery. 
+> I have created a simple script to install Windows 10 from WinPE called Wininstall.cmd - have a look here: [https://github.com/HaroldMitts/wininstall](https://github.com/HaroldMitts/wininstall), or alternatively, use the Microsoft version of **walkthough-deploy.bat** available here: https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip. My script is based on the Microsoft version, but adds some automation and either can be run during Windows PE to deploy Windows to devices, including BIOS and EUFI methods and hard disk recovery. 
 
 2. With the device still booted to Windows PE, and after Windows has been applied to the disk, the drive letters should have temporary letters assigned to them. 
 
