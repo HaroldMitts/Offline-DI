@@ -53,6 +53,6 @@ _(UEFI systems will contain additional partitions for MSR and EFI)_
 * Improper driver staging (check to be sure you put the drivers into the right location)
 * Drivers added to staging do not match the devices present 
 
-8. Shutdown the device using the Shutdown command. Example; **SHUTDOWN -T 0**
+8. Shutdown the device using the Shutdown command. Example; **SHUTDOWN -s -t 0**
 
 9. Prepare the device for shipment. Put it into inventory, ship it, or deliver it to the end-user.
