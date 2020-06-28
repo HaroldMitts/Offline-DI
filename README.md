@@ -12,9 +12,9 @@ The main action part of the script is leveraging the DISM (Deployment Image Serv
 
 The process flow for offline driver injection is described in 2 steps;
 
-***Preproduction phase***: where machine info is discovered and drivers are staged to a folder
+* ***Preproduction phase***: where machine info is discovered and drivers are staged to a folder
 
-***Production phase***: where staged drivers are injected into a device installation, during Windows PE, as follows;
+* ***Production phase***: where staged drivers are injected into a device installation, during Windows PE, as follows;
 
 ### Preproduction phase
 
