@@ -24,7 +24,7 @@ The process flow for offline driver injection is described in 2 steps;
 
 3. Obtain the device drivers which match the device and copy them to the folder amd64 folder (for 64-bit) or x86 (for 32-bit). These drivers must be in INF format. Executable device drivers will not be injected and are unsupported by DISM.
 
-> **Tip**: If you can boot the device into Windows, you can extract the drivers (best practice is to update them prior to extracting them) from the current installation and then save them for reuse on other systems which match. 
+> **Tip**: If you can boot the device into Windows, you can extract the drivers (best practice is to update them prior to extracting them) from the current installation, and then save them for reuse on other systems which match. 
 
 Extract the currently installed Windows device drivers using DISM by opening an elevated command prompt and type the following commands;
 
