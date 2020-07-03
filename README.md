@@ -18,11 +18,22 @@ The process flow for offline driver injection is described in 2 steps;
 
 ### Preproduction phase
 
-1. Determine the firmware (BIOS or UEFI) values set in the device for manufacturer, model, and the value in the OS for processor architecture. Use the BIOS-Values.cmd script to determine these values, while the PC is booted to Windows. You can also run this script under Windows PE, but the Windows PE will require optional components for WMI (See Microsoft documentation for details on adding optional components to Windows PE at this link [WinPE Optional Component Step-by-step](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)).
+1. Determine the firmware (BIOS or UEFI) values set in the device for **manufacturer**, **model**, and the value in the OS for **processor architecture**. Use the BIOS-Values.cmd script to determine these values, while the PC is booted to Windows. You can also run this script under Windows PE, but the Windows PE will require optional components for WMI as described here: [WinPE Optional Component Step-by-step](https://github.com/HaroldMitts/Build-CustomPE).
 
 2. Create a folder named after the values found in step 1. The drivers must be saved to this location, in **INF format**.
 
 3. Obtain the device drivers which match the device and copy them to the folder amd64 folder (for 64-bit) or x86 (for 32-bit). These drivers must be in INF format. Executable device drivers will not be injected and are unsupported by DISM.
+
+> **Tip**: If you can boot the device into Windows, you can extract the drivers (best practice is to update them prior to extracting them) from the current installation and then save them for reuse on other systems which match. 
+
+Extract the currently installed Windows device drivers using DISM by opening an elevated command prompt and type the following commands;
+
+````
+MD C:\Drivers
+DISM /Online /Export-driver /Destination:C:\Drivers
+````
+
+When you press enter, DISM will extract all out-of-box drivers to the C:\Drivers folder. You can then place these drivers into the appropriately named folders in your repository as described in steps 1-3 above. This extraction phase should be performed one time per PC model and then you will not need to repeat this step unless you encounter a new device configuration or when you want to update a particular PC model in your driver repository.
 
 ### Production use
 
