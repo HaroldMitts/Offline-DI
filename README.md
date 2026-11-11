@@ -1,4 +1,7 @@
 # Offline Driver Injection
+
+**Status: No longer maintained** — This project is no longer actively maintained and is provided as-is, with no updates, compatibility fixes, or support. Its scripts target legacy Windows deployment, Windows PE, and driver-injection workflows and may not work with current Windows or ADK releases. Verify against current Microsoft documentation before use, especially in production.
+
 The scripts in this repository can help you to deploy device drivers to an offline Windows installation while the device is booted to Windows PE.
 
 ## Overview
